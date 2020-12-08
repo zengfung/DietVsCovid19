@@ -1,0 +1,13 @@
+# csv files
+**.csv
+
+# cache data
+.ipynb_checkpoints/
+.RData
+.Rhistory
+
+# zip file
+archive*
+
+# project proposal files
+*Proposal*
