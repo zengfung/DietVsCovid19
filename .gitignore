@@ -11,3 +11,15 @@ archive*
 
 # project proposal files
 *Proposal*
+
+# plot folder
+plots/
+
+# pdf files
+**.pdf
+
+# powerpoint presentations
+**.pptx
+
+# jupyter-notebook file
+**.ipynb
