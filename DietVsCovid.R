@@ -84,10 +84,10 @@ row.names(bestCorDf) = NULL
 bestCorDf
 
 # distribution of Y variables
-hist(redDf$Cfm, xlab = "Cfm", main = "Confirmed Cases")
-hist(redDf$Death, xlab = "Death", main = "Death")
-hist(redDf$Rec, xlab = "Rec", main = "Recovered")
-hist(redDf$Active, xlab = "Active", main = "Active")
+hist(redDf$Cfm, xlab = "Cases", main = "Confirmed Cases")
+hist(redDf$Death, xlab = "Cases", main = "Death Cases")
+hist(redDf$Rec, xlab = "Cases", main = "Recovered Cases")
+hist(redDf$Active, xlab = "Cases", main = "Active Cases")
 
 # box cox transformation
 library(MASS)
@@ -97,10 +97,10 @@ fit = lm(I(Rec+.00001) ~ ., data = redDf[c(2:42, 47)]); boxcox(fit)
 fit = lm(I(Active+.00001) ~ ., data = redDf[c(2:42, 48)]); boxcox(fit)
 
 # log transformation of Y variables
-hist(log(fat$Cfm), xlab = "log(Cfm)", main = "log(Confirmed Cases)")
-hist(log(fat$Death), xlab = "log(Death)", main = "log(Death)")
-hist(log(fat$Rec), xlab = "log(Rec)", main = "log(Recovered)")
-hist(log(fat$Active), xlab = "log(Active)", main = "log(Active)")
+hist(log(fat$Cfm), xlab = "log (Cases)", main = "Log Transformation of Confirmed Cases")
+hist(log(fat$Death), xlab = "log (Cases)", main = "Log Transformation of Death Cases")
+hist(log(fat$Rec), xlab = "log (Cases)", main = "Log Transformation of Recovered Cases")
+hist(log(fat$Active), xlab = "log (Cases)", main = "Log Transformation of Active Cases")
 
 ##########################################
 ## model fitting
@@ -430,6 +430,6 @@ anova(rec.fit.final)
 
 # active cases
 actDf.rmOutlier = rbind(actDf.train, actDf.valid)
-act.fit.final = lm(act.fit4$call$formula, data = actDf.rmOutlier)
+act.fit.final = lm(act.fit3$call$formula, data = actDf.rmOutlier)
 summary(act.fit.final)
 anova(act.fit.final)

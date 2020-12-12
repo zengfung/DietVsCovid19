@@ -17,6 +17,7 @@ plots/
 
 # pdf files
 **.pdf
+!report.pdf
 
 # powerpoint presentations
 **.pptx
