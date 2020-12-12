@@ -24,3 +24,6 @@ plots/
 
 # jupyter-notebook file
 **.ipynb
+
+# video presentation
+*presentation/
